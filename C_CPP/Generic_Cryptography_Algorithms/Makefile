@@ -2,7 +2,7 @@ OBJECTS=crypt.o
 CFLAGS+=-fPIC
 
 all: BUILD_LIB main.c
-	$(CC) $(CFLAGS) -L./ main.c -lwrap_crypt -lcrypto
+	$(CC) -L./ main.c -lwrap_crypt -lcrypto
 
 BUILD_LIB: $(OBJECTS)
 	$(LD) -r $(OBJECTS) -o libwrap_crypt.a

@@ -1,7 +1,6 @@
 #include <openssl/evp.h>
 #include "crypt.h"
 
-
 int crypt_encrypt_data(char* data, int data_len, const char* cryptKey, enum ALG_ID algorithm, char* raw_out) {
     static unsigned char *iv = (unsigned char *)"0123456789012345";
     
